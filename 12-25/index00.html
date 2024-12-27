@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        background-color: #d4d4d4;
+      }
+      .list{
+        width: 1000px;
+        margin: 30px auto;
+        padding: 100px;
+        background-color: rgb(200, 200, 200);
+        -webkit-box-shadow: 10px 10px 5px -5px rgba(164, 187, 204, 0.6) inset;
+        -moz-box-shadow: 10px 10px 5px -5px rgba(164, 187, 204, 0.6) inset;
+        box-shadow: 10px 10px 5px -5px rgba(164, 187, 204, 0.6) inset;
+      }
+
+      /* .header-img{
+        float: left;
+      }
+      .header-text{
+        float: right;
+      } */
+
+      .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+      }
+      .header-text{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: italic;
+        font-weight: 550;
+        color: #909090;
+        width: 25%;
+      }
+
+      .content{        
+        border: 3px solid #dedede;
+        border-top: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .content-block-white:first-child {
+        text-align: center;
+      }
+      .content-block-white:last-child {
+        text-align: center;
+      }
+
+      .content-block-white{
+        border-top: 3px solid #dedede;
+        flex-direction: row-reverse;
+      }
+      .content-block-gray{
+        border-top: 3px solid #dedede;
+        background-color: rgb(200, 200, 200);
+      }
+
+      img{
+        height: 100px;
+        border-radius: 50%;
+        border: 2px #dedede;;
+      }
+
+      .img-right{        
+        text-align: right;       
+      }
+      .img-left{
+        text-align: left;
+      }
+
+      
+    </style>
+</head>
+<body>
+    <div class="list">
+        <div class="header">      
+            <div class="header-img">
+                <img src="images/logo-inky-black.png" alt="octopus" height="50">
+            </div>        
+            <div class="header-text">Dailly Deals for Creative Profession</div>    
+        </div>
+        
+        
+        <div class="content">
+            <div class="content-block-white">
+                <h2>                        Here is what InkyDeals is all about                    </h2>
+
+                    We'vw made a lot of friends along the way and nothing would make us happier <br>
+                    than being able to consider you part of our community.So let's get to know <br>
+                    each other better. Here are some insighst about us:                   
+            </div>
+
+
+            <div class="content-block-gray">                
+                    <h3>Average discount:</h3>
+                    The average discount for our products was <b>93.40%</b>   
+                    
+                    <div class="img-right"><img src="images/average-discount.jpg" alt="percent"></div>
+            </div>
+            
+
+
+            <div class="content-block-white">                
+                    <h3>Average user rating:</h3>
+                    The average user rating <b>4.5 out of 5</b>      
+                    
+                    <div class="img-left"><img src="images/rating.jpg" alt="star"></div>
+            </div>
+           
+            
+
+            <div class="content-block-gray">
+                
+                    <h3>Average discount:</h3>
+                    The average discount for our products was <b>93.40%</b>
+                
+                    <div class="img-right"><img src="images/savings.jpg" alt="dollar"></div>
+
+            </div>
+            
+
+
+            <div class="content-block-white"></div>
+                
+                    <h3>Average user rating:</h3>
+                    The average user rating <b>4.5 out of 5</b>
+                
+                    <div class="img-left"><img src="images/members.jpg" alt="people"></div>
+            </div>
+            
+
+
+            <div class="content-block-gray">
+                
+                    <h3>Average discount:</h3>
+                    The average discount for our products was <b>93.40%</b>
+                
+                    <div class="img-right"><img src="images/total-deals.jpg" alt=""></div>
+            </div>
+            
+
+
+            <div class="content-block-white">
+                
+                    <h3>Average user rating:</h3>
+                    Lorem ipsum dolor sit amet.
+                    Expedita animi error reprehenderit aspernatur?
+                    Sequi tempore dolorum enim fuga.
+                
+            </div>
+            
+        
+    </div>
+    </div>
+</body>
+</html>
