@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 30px auto;
+            border: 1px solid black;
+            font-size: 20px;
+            width: 30rem;
+            text-align: center;           
+        }
+        th{
+            border: 1px solid red;
+        }
+        td{
+            border: 1px solid blue   ;
+        }
+
+        table.collapse{
+            border-collapse: collapse;
+            margin: 10px;
+        }     
+
+
+
+
+        .plus-minus{
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 16px;
+            
+
+        }
+        span{
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        /* .plus-minus tr:first-child{
+            color: black;
+            text-decoration: none;
+        } */
+        .plus-minus td:first-child{
+            color: black;
+            text-decoration: none;
+        }
+        .plus-minus td:second-child{
+            color: black;
+            text-decoration: none;
+        }
+        
+
+        
+    
+    </style>
+</head>
+<body>
+
+    <table class="plus-minus">             
+        <tr>
+            <td colspan="3">SPECIFICATION</td>
+            <td><span class="circle">FREE</span></td>
+            <td><span class="circle">BASIC</span></td>
+            <td><span class="circle">STANDART</span></td>
+            <td><span class="circle">PREMIUM</span></td>
+        </tr>
+        <tr>
+            <td colspan="3">Lorem, ipsum.</td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+        </tr>
+        <tr>          
+            <td colspan="3">Lorem, ipsum.</td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+        </tr>
+        <tr>  
+            <td colspan="3">Lorem, ipsum.</td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+        </tr>
+        <tr>  
+            <td colspan="3">Lorem, ipsum.</td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+        </tr>
+        <tr>  
+            <td colspan="3">Lorem, ipsum.</td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>           
+        </tr>
+        <tr>  
+            <td colspan="3">Lorem, ipsum.</td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+            <td><span class="circle">+</span></td>
+        </tr>
+    </table>
+
+
+
+
+
+
+    <table>
+        <tr>
+            <th>colomn1</th>
+            <th>colomn2</th>
+            <th>colomn3</th>            
+        </tr>
+        <tr>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum dolor.</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Lorem.</td>
+            <td>Lorem.</td>
+        </tr>
+    </table>
+
+    <table class="collapse">
+        <tr>
+            <th>colomn1</th>
+            <th>colomn2</th>
+            <th>colomn3</th>            
+        </tr>
+        <tr>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum dolor.</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Lorem.</td>
+            <td>Lorem.</td>
+        </tr>
+    </table>
+
+    <table>             
+        <tr>
+            <td>1</td>
+            <td colspan="2">2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td rowspan="3">5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>           
+            <!-- <td>9</td> -->
+            <td>10</td>
+            <td colspan="2" rowspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>           
+            <!-- <td>3</td> -->
+            <td>14</td>
+    </table>
+
+
+    <hr>
+    <table class="center">             
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+            <td>C</td>            
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+        </tr>
+        <tr>           
+            
+            <td colspan="2">H</td>
+            <td>I</td>
+            <td rowspan="2">J</td>
+        </tr>
+        <tr>  
+            <td colspan="3">K</td>
+    </table>
+
+
+   
+
+
+</body>
+</html>
