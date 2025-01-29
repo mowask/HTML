@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.styled-checkbox input{
+    display: none;
+}
+
+.styled-checkbox{  
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.styled-checkbox .checkmark{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    background-color: #ddd;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+.styled-checkbox:hover .checkmark{
+background-color: #997272;
+}
+
+.styled-checkbox .checkmark::before{
+    content: "";
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #890606;
+}
+
+.styled-checkbox input:checked ~ .checkmark::before{
+display: block;
+}
+
+/*  */
+
+.styled-checkbox2 input{
+display: none;
+}
+
+.styled-checkbox2{
+    display: flex;
+align-items: center;
+}
+
+.styled-checkbox2 .checkmark-box{
+display: flex;
+border: 2px solid #210561;
+border-radius: 1px;
+margin-right: 4px;
+width: 18px;
+height: 18px;
+padding: 2px;
+}
+.styled-checkbox2{
+    cursor: pointer;
+}
+.styled-checkbox2:hover .checkmark-box{
+background-color: #a09098;
+}
+
+.styled-checkbox2 .checkmark{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #210561;
+    border-radius: 1px;
+    transition: transform 500ms linear;
+    transform: scale(0);
+}
+
+.styled-checkbox2 input:checked ~ .checkmark-box .checkmark{
+    transform: scale(1);
+}
+
+/*  */
+
+.styled-checkbox3 input{
+    display: none;
+}
+.styled-checkbox3 .checkmark{
+    display: none;
+}
+
+.styled-checkbox3{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.styled-checkbox3 .checkmark-box{
+    display: flex;
+    border: 2px solid #17d841;
+    border-radius: 1px;
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    
+}
+
+.styled-checkbox3 .checkmark{
+    display: block;
+    font-size: 10px;
+    color: darkorchid;
+    font-weight: 800;
+    transition: transform 300ms ease;
+    transform: rotate(45deg) scale(0);
+}
+.styled-checkbox3 input:checked ~ .checkmark-box .checkmark{
+    transform: rotate(360deg) scale(1);
+}
+
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resilt4{
+            width: 300px;
+            box-sizing: border-box;
+            background-color: #eee;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+        #result4 div{
+            width: 100px;
+            height: 100px;
+        }
+        #result4 div.blue{
+            background-color: blue;
+        }
+        #result4 div.red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div>
+        <input type="text" id="numberInput">
+        <button id="submitButton">Click Me</button>
+    </div>
+    <br>
+    <div id="result4">
+        <!-- <div class="blue"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="red"></div> -->
+    </div>
+    <script>
+        // result.innerHTML = "<h1> Hello from JS <h1>";
+
+        // for (let i = 1; i <7; i++){
+        //     result2.innerHTML += `<h${i}> Hello from JS</h${i}>`
+        // }
+
+        // for (let i = 1; i <21; i++){
+        //     result3.innerHTML += `<span> ${i**2}</span>`
+        // }
+
+
+        // for (let i = 1; i <21; i++){
+                // result4.innerHTML += <div class = "blue"></div>
+                // result4.innerHTML += <div.red></div.red>
+
+        function getDiv(){
+            let count = parseInt(numberInput.Value);
+            result4.innerHTML = "";
+            for (let i = 1; i <21; i++){                
+                result4.innerHTML += `<div class = "${colorFoo}"></div>`                
+            }
+        }
+        function colorFoo() {
+            if (i%2 == 0)  
+                return "blue"
+            return "red"
+        } 
+        submitButton.onclick = getDiv;
+    </script>
+</body>
+</html>

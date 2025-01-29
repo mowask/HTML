@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div></div>
+    
+    <script>
+
+        // function logArguments() {
+        //     console.log(arguments);
+        // }
+
+        // logArguments (1,2,3)
+        // logArguments ("text")
+
+
+        function max(){
+            if (arguments.length ==0) return undefined;
+
+            let maxValue = arguments[0];
+            for (let i; i< arguments.length; i++ ){
+                if (arguments[i]>maxValue) {
+                    maxValue = arguments[i]
+                }
+            }
+            return maxValue;
+        }
+
+        function sum(){
+            if (arguments.length ==0) return undefined;
+            let s = 0
+            for (let i = 0; i< arguments.length; i++ ){
+                s +=arguments[i]
+            }
+        return s
+        }
+
+        function toString() {
+            if (arguments.length ==0) return '';
+            let str = ''
+            for (let i =0; i< arguments.length; i++ ){
+                str += arguments[i]
+            }
+            return str
+        }
+
+        console.log(max (4,5,12,34))
+        console.log(sum (4,5))
+        console.log(toString ("hello", 120))
+
+        
+
+    </script>
+
+</body>
+</html>

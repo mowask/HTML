@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;    
+    font-family: "Montserrat", serif;
+    background-color: #f0f0f0;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    background-color: #fff;
+    height: 94px;
+    box-shadow: 0 0 12px rgb(0 0 0 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li{
+    margin: 25px;
+    padding-top: 2px;
+}
+
+header nav ul li:last-child{
+    margin-right: 0px;
+}
+
+header nav ul li a{
+    text-transform: uppercase;
+    color: #0f1384;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li a:hover{
+    color: #989898;
+    border-bottom: 2px solid #989898;
+}
+
+.banner{
+    background-image: url("../images/header-bg.jpg");
+    height: 555px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner h1 , h2 {
+    color: #fff;
+}
+
+.banner h1 {
+    font-size: 60px;
+    margin-top: 145px;
+    animation-name: moveLeft;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+.banner h2 {
+    font-size: 40px;
+    margin-top: 76px;
+    animation: meveRight 0,5s ease-in-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.section h3{
+    text-align: center;
+}
+
+@keyframes moveRight {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }    
+}
+
+@keyframes moveLeft{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }    
+}
+
+/* footer */
+
+footer{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f1384;
+    color: #fff;
+}
+
+footer nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+}
+
+footer nav ul li a{    
+    color: #fff;
+    text-decoration: underline;    
+    border-bottom: 2px solid transparent;
+}
+
+footer nav ul li{
+    margin: 25px;
+    padding-top: 2px;
+}
+
+footer div a{
+    margin: 5px;
+    padding-top: 2px;
+    color: #fff;
+    text-decoration: underline;    
+    border-bottom: 2px solid transparent;
+}

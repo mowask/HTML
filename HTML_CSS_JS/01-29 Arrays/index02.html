@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter number" id="textInput">
+        <button id="submitButton">Add</button>
+        <button id="deleteButton">Delete</button>
+        <button id="avgButton">Avg</button>
+    </div>
+    <div id="resultDiv"></div>
+    <div id="resultDivAvg"></div>
+
+    <script>
+        let arr = [5, 7, 3, 12, 44];
+
+        // function addNumber(){
+
+        //     arr.push(textInput.value)            
+        // }
+
+        // function deleteNumber () {
+        //     arr.pop()
+        // }
+
+        // submitButton.onclick = addNumber;
+        // deleteButton.onclick = deleteNumber;
+
+        function showArray() {
+            resultDiv.innerText = arr.join(" ")
+        }
+
+        function showArrayAvg() {
+            resultDiv2.innerText = avgArray()
+        }
+
+        function addNumber (){
+            const newNum = parseInt(textInput.value);
+
+            if (isNaN(newNum)) return;
+
+            arr.push(newNum);
+            showArray()
+
+            textInput.value = ''
+        }
+
+        submitButton.onclick = addNumber;
+
+
+        function deleteNumber() {
+            arr.pop();
+            showArray();
+        }
+
+        deleteButton.onclick = deleteNumber;
+
+
+        function avgArray(){
+
+            if (arr.length == 0) return;
+
+            let sum = 0
+            for (let i of arr){
+                sum += i
+            }
+           let avg = sum/arr.length;     
+           
+           resultDivAvg.innerText = avg;
+        }
+
+        avgButton.onclick =  avgArray
+
+
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

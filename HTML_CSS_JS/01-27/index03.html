@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="password" placeholder="password" id="passwordInput">
+        <button id="checkButton">Check password</button>
+    </div>
+    <div id="resultDiv"></div>
+
+    <script>
+
+        const validPassword1 = "Step";
+        const validPassword2 = "Step93";
+        const validPassword3 = "Step@93";
+
+        // let checkPassword = function(password){
+        //     if ( password == validPassword1||
+        //     password == validPassword2||
+        //     password == validPassword3
+        //     ) return "Correct password"
+        // return "Wrong Password"
+        // }
+
+        let checkPassword = function(password){
+        switch(password){
+            case validPassword1:
+            case validPassword2:
+            case validPassword3:
+                return "Correct password"
+            default:
+                 return "Wrong Password"
+            }            
+        }
+
+        function buttonClick() {
+            let pw = passwordInput.value;
+            let result = checkPassword(pw);
+            resultDiv.innerText = result;
+        }
+
+        checkButton.onclick = buttonClick;
+
+
+    </script>
+</body>
+</html>

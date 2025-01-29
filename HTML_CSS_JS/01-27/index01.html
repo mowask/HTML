@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter name" id="textInput">
+        <button id="submitButton">show Hello</button>
+    </div>
+    <div id="resultDiv"></div>
+    <script>
+        
+        function showHello() {
+            //
+            let name = textInput.value;
+            //
+            resultDiv.innerText = "Hello, " + name + "!"
+        }
+
+        //
+        submitButton.onclick = showHello;
+
+
+
+
+
+
+        // 
+        // for (var i = 0; i <3; i++){
+        //     alert("var i inside for:" + i);
+        // }
+        // alert("var i outside for:" + i);
+
+        // for (let ij = 0; j <3; j++){
+        //     alert("let j jnsjde for:" + j);
+        // }
+        // alert("let j outsjde for:" + j);
+
+    </script>
+
+</body>
+</html>

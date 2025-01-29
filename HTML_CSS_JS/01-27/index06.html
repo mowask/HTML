@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <div class="form">
+        Model: <input type="text"  id="modelInput">
+        Year: <input type="text"  id="yearInput">
+        Speed: <input type="text"  id="speedInput">
+        <button id="submitButton">submit</button>
+    </div>
+    <div id="carInfo"></div>
+    <br>
+    <div>
+        <input type="text" placeholder="kmNeed" id="kmInput">
+        <button id="submitKmButton">Calculate</button>
+    </div>
+    <div id="resultDiv"></div>
+
+    <script>
+
+        // let cat = {};
+        // cat.Name = "Tom";
+        // cat["Age"] = 2
+        // alert (cat.Name)
+        // alert (cat.Age)
+
+        // delete(cat.Name)
+        // delete(cat.Age)
+        // alert (cat.Name)
+        // alert (cat.Age)
+
+
+        // let rect = {
+        //     x: 0,
+        //     y: 0,
+        //     endX: 10,
+        //     endY: 10
+        // };
+        // for (let tempProperty in rect) {
+        //     alert(tempProperty)
+        //     alert(rect[tempProperty]);
+        // }
+
+
+        let car = {};
+        function showCarInfo() {
+            car = {
+            model: modelInput.value,
+            year: parseInt(yearInput.value),
+            speed: parseInt(speedInput.value)
+            } 
+
+            carInfo.innerHTML = `<div> Your car: ${car.model}${car.year}</div>`
+        }
+       
+       
+        function timeToDistanse() {
+            if ("speed" in car){
+                let s = parseInt(kmInput.value);
+
+                resultDiv.innerText = s/car.speed
+            }
+            else{
+                resultDiv.innerHTML = "No car submitted"
+            }
+        } 
+
+        submitButton.onclick = showCarInfo     
+
+        submitKmButton.onclick = timeToDistanse;
+        
+
+    </script>
+
+</body>
+</html>

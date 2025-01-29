@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Enter text" id="textInput">
+        <button id="submitButton">Submit</button>
+    </div>
+    <div id="resultDiv"></div>
+
+
+    <div>
+        <input type="text" placeholder="Enter button" id="textInput2">
+        <button id="toUpperButton">To UPPER</button>
+        <button id="toLowerButton">To lower</button>
+    </div>
+    <div id="resultDiv2"></div>
+
+    <div>
+        <input type="text" placeholder="Enter name" id="textInput2">
+        <button id="searchName">Search</button>
+        
+    </div>
+    <div id="resultDivName"></div>
+
+    <script>
+
+        function submitHandler() {
+            let str = textInput2.value;
+            resultDiv.innerText = str.length
+        }
+        submitButton.onclick = submitHandler;
+
+        
+        function toUpper () {
+            let str2  = textInput2.value.toUpperCase()
+            resultDiv2.innerText = str2
+        }
+        function toLower () {            
+            resultDiv2.innerText = textInput2.value.toLowerCase()
+        }
+            
+        toUpperButton.onclick = toUpper;
+        toLowerButton.onclick = () => resultDiv2.innerText = textInput2.value.toLowerCase();
+
+        // var str = "FootbalL"
+        // var newStr = str.toLowerCase()
+        // alert(newStr)
+
+
+        // ==============================================================================
+
+        const str3 = "hello, world!";
+        const newStr3 = str3.replace("world", "everyone");
+        console.log(newStr3)
+
+
+        // =========================================================================
+
+        // const word = "hello";
+        
+        // if (str3.includes(word)){
+        //     console.log('est "hello" ')
+        // }
+        // else{
+        //     console.log('net "hello" ')
+        // }
+
+
+
+        const names = ["John Doe","Jane Doe","Sam Acme","Mark Acer"]
+
+        function searchNames (text) {
+            for(n of names){
+                if (n.includes(text)){
+                    console.log(n)
+                }
+            }
+            // resultDiv3.innerText = 
+        }
+
+        console.log(searchNames("Doe"))
+
+        function searchNamesFilter(text) {
+            console.log(names.filter(x => x.includes(text)))
+        }
+
+        console.log(searchNamesFilter("Doe"))
+
+        searchName.onclick = searchNames;
+
+
+
+
+        // var str = "trees and fruits"
+
+
+        // alert(str)
+        // str[0] = 'z'
+
+        // alert(str[0])
+        // alert(str.length)
+
+
+
+    </script>
+</body>
+</html>

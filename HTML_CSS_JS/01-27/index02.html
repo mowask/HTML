@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="text" placeholder="x" id="xInput">
+        <input type="text" placeholder="y" id="yInput">
+        <input type="text" placeholder="Op" id = opInput>
+        <button id="submitButton">submit</button>
+    </div>
+    <div id="resultDiv"></div>
+
+    <script>
+
+        function min(x,y){
+            if (x>y)
+                return y
+            return x
+        }
+        
+
+        let max = (x,y) => x>y ? x : y
+        let avg = (x,y) => (x + y ) / 2
+
+        function calculate() {
+            let x = parseInt (xInput.value)
+            let y = parseInt (yInput.value)
+            let op = parseInt (opInput.value)
+        
+            let res
+            switch (op){
+                case 1:
+                    res = "min = " + min(x, y);
+                    break;                
+                    case 2:
+                    res = "max = " + max(x, y);
+                    break;
+                case 3:
+                    res = "avg = " + avg(x, y);
+                    break;
+            }
+            resultDiv.innerText = res
+        }
+
+        submitButton.onclick = calculate;
+
+
+    </script>
+    
+</body>
+</html>

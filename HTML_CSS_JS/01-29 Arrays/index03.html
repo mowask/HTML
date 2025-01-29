@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const str = "Hello world!"
+
+        const words = str.split(" ");
+        console.log("words: ", words)
+
+        const subStr = str.slice(0,7)
+        console.log("slice: ", subStr)
+
+        const arr1 = ["hello, world"];
+        const arr2 = ["!"];
+        const conbinedArr = arr1.concat(arr2);
+        console.log("concat", conbinedArr)
+
+        // ==========================================================
+
+        let numbers = [2, 5, 7, 11, 13, 21, 1 ,3, 8]
+
+        function square(x) {
+            return x*x;
+        }
+
+        let numbersSqured = numbers.map(square);
+        console.log("x*x = ", numbersSqured)
+
+        let numbersDoubled = numbers.map((x) => x*2);
+        console.log("x*2 = ",numbersDoubled)
+
+        let numbersString = numbers.map((x) => `<li>${x}</li>`);
+        console.log(numbersString)
+
+
+        function isBigger6 (x) {
+            return x>6;
+        }
+        let numbersBigger6 = numbers.filter(isBigger6)
+        console.log(">6 :",numbersBigger6)
+
+        let numberEvenDevidedBy2 = numbers.filter(x => x%2 == 0 ).map(x => x/2);
+        console.log("even / 2 : ",numberEvenDevidedBy2)
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

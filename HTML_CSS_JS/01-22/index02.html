@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: cadetblue;
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <input type="text" id="nameInput">
+
+    <button id="button">Submit</button>
+
+    <div id="test"></div>
+
+    <script>
+        // let name = prompt("Enter your name")
+
+        function setName() {
+            name = nameInput.value;
+            // let result = "Hello, " + name + "!";
+            let result = `Hello, ${name}!`;
+            test.innerText = result;
+        }
+        button.onclick = setName;
+    </script>
+ 
+    
+</body>
+</html>

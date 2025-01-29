@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <div id="xInput"> x: 
+        <input type="text" id="x">
+    </div>
+    <div id="yInput">Y:
+        <input type="text" id="y"> 
+    </div>
+    <button id="button">Submit</button>
+    <div id="result">Your result: </div>
+    <script>
+        function ShowResult() {
+            let x = parseInt(x.value);
+            let y = parseInt(y.value);
+            
+            if (x > 0 && y>0)
+            if (x > 0 && y<0)
+            if (x < 0 && y<0)
+            if (x < 0 && y>0)
+            if (x == 0 && y == 0)
+
+        }
+        button.onclick = ShowResult;
+    </script> -->
+
+
+    <div id="planetInput">
+        <input type="text" name="" id="planet">
+    </div>
+    <button id="button">Submit</button>
+    <div id="hello"></div>
+    <script>
+        function showHello() {
+            let result = (planet.value == "Земля" || planet.value == "земля") ? "Привет, землянин" : "Привет, инопланетянин"  
+            hello.innerText = result;
+        }
+        button.onclick = showHello;
+
+    </script>
+
+
+</body>
+</html>
