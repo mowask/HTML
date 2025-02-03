@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            height: 100px;
+        }
+        h2 {
+            animation: h2Animation 2s ease 0 1 normal none;
+        }
+
+        h2:nth-child(2){
+            color: blue;
+        }
+
+        @keyframes h2Animation {
+            0%{
+                transform: scale(0)
+            }
+            50%{
+                transform: scale(2)
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="resultDiv"></div>
+
+    <script>
+
+        function addH2(text){
+            let h2 = document.createElement('h2');
+            h2.innerText = text;
+            resultDiv.appendChild(h2)
+           
+            // resultDiv.innerHTML += `<div><h2>${text}</h2></div>`;
+        }
+        setTimeout(addH2, 3000, "3 second")
+        setTimeout(addH2, 6000, "6 second")
+        let id  = setTimeout(addH2, 9000, "9 second")
+        setTimeout(addH2, 12000, "12 second")
+        setTimeout( ()=> addH2("15 second"), 15000)
+
+        clearTimeout(id);
+
+        // document.body.innerText = "Hello from document"
+
+
+
+
+
+
+        // function HelloWorld(){
+        //     alert("Hello world!")
+        // }
+        // setTimeout(HelloWorld, 1000);
+
+        // function Sum (a,b){
+        //     alert(a+b)
+        // }
+        // setTimeout(Sum, 1000, 1, 2)
+        // //  =
+        // setTimeout ( () => Sum(4,5), 3000 )
+    </script>
+</body>
+</html>

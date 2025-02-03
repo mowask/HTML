@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeBackgrounColor() {
+            document.body.style.background = "blue"
+        }        
+    </script>
+
+    <style>
+        body{
+            transition: font-size 0.5 ease-in-out;
+        }
+    </style>
+</head>
+<body> Hello World
+    <button onclick="alert('Click!')">Push me</button>
+    <button ondblclick="changeBackgrounColor()">Double Click</button>
+    <button onmousedown="upFontSize()">more Font-Size </button>
+    <script>
+
+        let size = 16;
+        function upFontSize() {
+            size += 12;
+            document.body.style.fontSize = `${size}px`;
+        }
+
+        // document.body.style.backgroundcolor = "red";
+       
+        
+    </script>    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text{
+            font-size: 40px;
+            background-color: gray;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .blue{
+            font-size: 40px;
+            background-color: blue;
+            width: 200px;
+        }
+        .red{
+            font-size: 40px;
+            background-color: red;
+            width: 200px;
+        }
+        .purple{
+            font-size: 40px;
+            background-color: purple;
+            width: 200px;
+        }
+        .green{
+            font-size: 40px;
+            background-color: green;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text" >
+        JavaScript Events
+    </div>
+    <div class="buttons">
+        <button ondblclick="changeColor('blue')" class="blue">blue</button>
+        <button ondblclick="changeColor('red')" class="red">red</button>
+        <button ondblclick="changeColor('purple')" class="purple">purple</button>
+        <button onclick="changeColor('green')" class="green">green</button>        
+    </div>
+
+    <script>
+        function changeColor(color){
+            let myText = document.getElementById("text")
+            myText.style.color = color
+        }
+    </script>
+</body>
+</html>

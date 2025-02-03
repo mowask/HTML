@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="addFunction(`-`)">-</button>
+        <input type="text" name="" id="myInput" value="0">
+        <button onclick="addFunction('+')">+</button>
+    </div>
+    <script>
+        function addFunction(simb) {
+            let counter = document.getElementById("myInput");
+            if (simb == '-')
+                counter.value = parseInt(counter.value)  - 1
+            if (simb == '+')
+                counter.value = parseInt(counter.value)  + 1
+        }
+    </script>
+</body>
+</html>

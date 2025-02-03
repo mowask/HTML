@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Search">
+    <ul id="nameList"></ul>
+    <script>
+        const names = ["John Doe","Jane Doe","Marc Ace","Mark Foo"]
+
+        function showNames(){
+            for (let name of names){
+                  nameList.innerHTML += `<li>${name}</li>`
+            }
+        }
+
+        function searchNames(){
+
+            // console.getlog(searchNames)
+
+            showNames;
+            //
+            nameList.innerHTML = "";
+
+            //
+            let searchTerm = nameInput.value.toLowerCase();
+
+            // 
+            for (let name of names) {
+                //  если имя содержит введеный поисковой запрос
+                if (name.toLowerCase().includes(searchTerm)){
+                    nameList.innerHTML += `<li>${name}</li>`
+                }
+            }
+        }
+
+        let timeoutId = null;
+        function searchNamesWithTimeout(){
+            if (timeoutId != null)
+                clearTimeout(timeoutId);
+            timeoutId =setTimeout (searchNames, 1000)
+        }
+
+        //  при каждом изменении значения в поле ввода
+        //  вызывается в фунции searchNames()
+        nameInput.oninput = searchNamesWithTimeout;
+
+    </script>
+</body>
+</html>

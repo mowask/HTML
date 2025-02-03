@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myInput" oninput="spaceReplace()">
+    <input type="text" id="myInput2" oninput="upper()">
+
+    <script>
+       
+        function spaceReplace() {
+            let myInput = document.getElementById("myInput");
+            myInput.value = myInput.value.replace(' ', '' )
+        }
+
+        function upper() {
+            let myInput2 = document.getElementById("myInput2");
+            myInput2.value = myInput2.value.toUpperCase();
+        }
+
+    </script>
+</body>
+</html>
