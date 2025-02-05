@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 10px;
+            font-size: 48px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box box1">
+            <div class="content">Box 1 content</div>
+        </div>
+        <div class="box box2">
+            <div class="content">Box 2 content</div>
+        </div>
+    </div>
+    <button id="myButton">Click me</button>
+    <script>
+        const myButton = document.getElementById('myButton')
+        console.log(myButton);
+
+        const myBoxes = document.getElementsByClassName('box')
+        console.log(myBoxes);
+        const myContent = document.querySelector('.content')
+        console.log(myContent)
+        const myContents = document.querySelectorAll('.content')
+        console.log(myContents)
+
+        function clickHandler() {
+            myContent.style.color = "blue"; 
+
+            // document.getElementsByClassName('')   -->     HTMLCollection       --> for ()
+            for(let b of myBoxes) {
+                b.style.background = "yellow"
+            }       
+
+            // document.querySelector('.')      --> NodeList        -->     for () / foreach ()
+            myContents.forEach(c => c.style.background = "red");                
+     
+
+        }
+
+        myButton.onclick = clickHandler;
+
+
+
+
+    </script>
+</body>
+</html>

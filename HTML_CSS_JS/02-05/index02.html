@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv" style="font-size: 32px;">
+        Hi
+    </div>
+    <select name="city" id="city-select">
+        <option value="">city</option>
+        <option value="Moscow">Moscow</option>
+        <option value="Vladimir">Vladimir</option>
+    </select>
+
+    <script>
+        function changeText() {
+            var myDiv = document.getElementById('myDiv');
+            myDiv.innerHTML = this.value;            
+        }
+        
+        var mySelect = document.getElementById('city-select')
+        mySelect.onchange = changeText;
+
+    </script>
+</body>
+</html>

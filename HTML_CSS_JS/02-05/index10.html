@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            transition: height 0.4s ease-out;
+            height: 0;
+            overflow: hidden;
+        }
+        .tab.show .content{
+            height: 32px;
+        }
+        .tittle{
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tittle">Lorem, ipsum dolor.</div>
+        <div class="content">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div class="tab">
+        <div class="tittle">Lorem, ipsum dolor.</div>
+        <div class="content">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div class="tab">
+        <div class="tittle">Lorem, ipsum dolor.</div>
+        <div class="content">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll(".tab")
+
+        tabs.forEach(b => {
+            b.onclick = () => b.classList.toggle("show")          
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

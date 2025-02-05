@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <dic class="text">onclick - </dic>
+        <dic class="text">ondblclick - </dic>
+        <dic class="text">onfocus - </dic>
+        <dic class="text">onfocusout - </dic>
+        <dic class="text">oninput</dic>
+    </div>
+    <script>
+         const elements = document.querySelectorAll('.text')
+
+        //  function show(element) {
+        //     element.style.opacity = 1
+        //  }
+
+        //  function hide(element) {
+        //     this.style.opacity = 0.4
+        //  }
+
+        //  for (e of elements) {
+        //     e.onmouseover = () => show(e);
+        //     e.onmouseout = hide(e);
+        //  }
+
+
+        function show(element) {
+            element.style.opacity = 1
+         }
+
+         function hide(element) {
+            this.style.opacity = 0.4
+         }
+
+         elements.forEach(e => {
+            e.onmouseover = () => show(e);
+            e.onmouseout = () => hide(e)
+        });
+
+    </script>
+</body>
+</html>

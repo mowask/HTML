@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .radio {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="myText" style="font-size: 32px;">
+        Something text
+    </div>
+    <div class="radio">
+        <input type="radio" name="property" value="fontColorRadio" id="property-radio1" checked="checked">
+        <label for="property-radio1">Font color</label>
+
+        <input type="radio" name="property" value="bgColorRadio"  id="property-radio2">
+        <label for="property-radio2">Background color</label>
+    </div>
+    <div>
+       <select name="colorSelect" id="colorSelect">
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Red">Red</option>
+       </select>
+    </div>
+
+    <script>
+
+        const selectText = document.getElementById('myText')
+        const selectColor = document.getElementById('color-select')
+        const selectFont = document.getElementById('property-radio1')
+        const selectBg = document.getElementById('property-radio2')
+        
+        function changeHandler() {
+            if(fontColorRadio.checked)
+                myText.style.font.color = this.value;
+            if(bgColorRadio.checked)
+                myText.style.font.color = this.value;
+        }
+
+        selectColor.onchange = changeHandler;
+
+        // function changeFontColor() {
+        //     let color = this.value;
+        //     document.body.style.background = color;
+        // }
+
+        // function changeBgColor() {
+        //     let color = this.value;
+        //     document.body.style.background = color;
+        // }
+
+        // radio1.onclick = changeFontColor;
+        // radio2.onclick = changeBgColor;         
+      
+
+    </script>
+</body>
+</html>

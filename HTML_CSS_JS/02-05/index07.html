@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="radio" value="blue" name="background" id="background-blue">
+            <label for="background-blue">blue</label>
+        </div>
+        <div>
+            <input type="radio" value="red" name="background" id="background-red">
+            <label for="background-red">red</label>
+        </div>
+        <div>
+            <input type="radio" value="yellow" name="background" id="background-yellow">
+            <label for="background-yellow">yellow</label>
+        </div>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('.inputs input')
+
+        function changeBg(input){
+             let color = input.value;
+             document.body.style.background = color;
+             alert(color);
+        }
+
+        inputs.forEach (e => {
+             e.onclick = () => changeBg(e)
+            });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-input {
+            font-size: 40px;
+            margin: 10px;
+        }
+
+        .input-focus {
+            border: 2px solid blue;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" class="text-input">
+        <input type="text" class="text-input">
+        <input type="text" class="text-input">
+        <input type="text" class="text-input">
+    </div>
+
+    <script>
+
+        const inputs = document.querySelectorAll('.text-input')
+
+        function addClass(input) {
+            input.classList.add("input-focus")
+        }
+        function removeClass(input) {
+            input.classList.remove("input-focus")
+        }
+
+        inputs.forEach(e => {
+            e.onfocus = () => addClass(e)
+            e.onblur = () => removeClass(e)
+        });
+    </script>
+</body>
+
+</html>

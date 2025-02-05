@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tooltipElement{
+            color: #fff;
+            background-color: blue;
+            position: relative;
+        }
+        .tooltip {
+            color: black;
+            background-color: #fff;
+            border: 1px solid black;
+            position: absolute;
+            top: 20px;
+            left: 300px;    
+        }
+    </style>
+</head>
+<body>
+    <div id="tooltipElement"> focus cursor to me </div>
+
+    <script>
+
+        const tooltipElement = document.getElementById('tooltipElement')
+        function createTooltip() {
+            const tooltip = document.createElement('div');
+            tooltip.textContent = "something text";
+            tooltip.className = tooltip;
+            tooltipElement.appendChild(tooltip)
+        }
+        function deleteTooltip() {
+            const tooltip = document.querySelector('.tooltip');
+            tooltipElement.removeChild(tooltip)
+        }
+
+        tooltipElement.onmouseover = createTooltip;
+        tooltipElement.onmouseout = deleteTooltip;
+
+    </script>
+</body>
+</html>

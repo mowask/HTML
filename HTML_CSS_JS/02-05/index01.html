@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="button" id="myButton" onclick="alert('was')" value="push me">
+
+    <button onclick="alert(this.innerHTML)">
+        push
+    </button> -->
+
+    <fieldset>
+        <legend>color:</legend>
+        <div>
+            <input type="radio" id="radio-1" name="color" value="blue">
+            <label for="radio-2">Blue</label>
+        </div>
+        <div>
+            <input type="radio" id="radio-2" name="color" value="red">
+            <label for="radio-2">Red</label>
+        </div>
+    </fieldset>
+
+    <script>
+
+        var radio1 = document.getElementById('radio-1')
+        var radio2 = document.getElementById('radio-2')
+        function changeBodyBg() {
+            let color = this.value;
+            document.body.style.background = color;
+        }
+
+        radio1.onclick = changeBodyBg;
+        radio2.onclick = changeBodyBg;
+
+    //    var myButton = document.getElementById('myButton') 
+    //     myButton.onclick = function() {
+    //         alert('now')
+    //     };
+
+    
+    </script>
+</body>
+</html>

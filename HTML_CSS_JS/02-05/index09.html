@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myButton{
+            font-size: 32px;
+            background-color: #eee;
+        }
+        .myButtonClicked{
+            opacity: 0.8;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="myButton">First</button>
+        <button class="myButton">Second</button>
+        <button class="myButton">Fird</button>
+        <button class="myButton">Fourth</button>
+    </div>
+    <script>
+        const buttons =  document.querySelectorAll('.myButton')
+
+        function addClass(button) {
+            /*if(button.classList.contains("myButtonClicked"))
+                button.classList.remove("myButtonClicked")
+            else
+                button.classList.add("myButtonClicked")*/
+            
+            button.classList.toggle("myButtonClicked")
+        }
+       
+        // function removeClass(button) {
+
+        // }
+
+        buttons.forEach(b => {
+            b.onclick = () => addClass(b)            
+        });
+
+
+    </script>
+</body>
+</html>
