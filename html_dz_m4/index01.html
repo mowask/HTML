@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часы</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;            
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .clock {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 5px solid rgb(15, 108, 99);
+            border-radius: 50%;
+            background: white;
+           
+        }
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            background: rgb(15, 108, 99);
+        }
+        .hour {
+            width: 4px;
+            height: 60px;
+            animation: rotateHour 48s linear infinite;
+        }
+        .minute {
+            width: 3px;
+            height: 90px;
+            animation: rotateMinute 4s linear infinite; 
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: rgb(15, 108, 99);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rotateHour {
+            from {
+                transform: rotate(0deg); 
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotateMinute {
+            from {
+                transform: rotate(0deg); 
+            }
+            to {
+                transform: rotate(360deg); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="center"></div>
+    </div>
+</body>
+</html>
