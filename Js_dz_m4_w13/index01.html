@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Числовой ввод</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .number-input {
+            font-size: 24px;
+            width: 100px;
+            text-align: center;
+            margin: 0;        
+            height: 44px;
+            box-sizing: border-box;
+        }
+        .btn {
+            font-size: 16px;           
+            cursor: pointer;
+            width: 30px;
+            height: 22px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            height: 44px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="numberInput" class="number-input" readonly>
+        <div class="buttons">
+            <button class="btn" id="plusButton">+</button>
+            <button class="btn" id="minusButton">-</button>
+        </div>
+    </div>
+
+    <script>
+        let currentNumber = 0;
+        const number = document.getElementById("numberInput");
+        const plusButton = document.getElementById("plusButton");
+        const minusButton = document.getElementById("minusButton");
+
+        plusButton.addEventListener("click", plusNumber);
+        minusButton.addEventListener("click", minusNumber);
+
+    
+        function plusNumber() {
+            currentNumber += 1;
+            number.value = currentNumber;
+        }
+
+        function minusNumber() {
+            currentNumber -= 1;
+            number.value = currentNumber;
+        }
+        
+    </script>
+</body>
+</html>
