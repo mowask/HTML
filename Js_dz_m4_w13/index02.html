@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blocks div {
+            height: 100px;
+            width: 100px;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap ;
+        }
+        .myBlock{
+            height: 50px;
+            width: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+
+    <button id="addButton">Add block</button>
+
+    <script>
+
+        const container = document.querySelector(".container");
+        const button = document.querySelector("#addButton")
+
+        function addBlock() {
+            let block = document.createElement("div");
+            block.classList.add("myBlock");
+
+            var red = Math.floor(Math.random() * 255);
+            var green = Math.floor(Math.random() * 255);
+            var blue = Math.floor(Math.random() * 255);
+            block.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+            block.addEventListener("click", () =>{
+                block.remove();
+            })
+
+            container.appendChild(block);
+        }
+
+        button.addEventListener("click", addBlock);
+
+    </script>
+</body>
+
+</html>
