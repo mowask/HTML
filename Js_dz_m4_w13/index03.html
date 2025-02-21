@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            font-size: 20px;
+            margin: 10px;
+        }
+
+
+        .blocks div {
+            height: 100px;
+            width: 100px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .myBlock {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Possimus nam, culpa iure quam molestiae nihil ea?
+        Voluptates rerum perspiciatis nihil ut ex consectetur ab.
+        Ratione ipsum iusto optio non? Sed, soluta voluptatem.
+        Libero molestias possimus adipisci, est atque laudantium cum!
+        Cupiditate minus eaque placeat culpa impedit dignissimos alias?
+        Voluptatum, nisi. Id blanditiis asperiores fugiat corporis molestias!
+        Exercitationem, totam! Facilis reprehenderit repudiandae magnam harum tempora.
+    </div>
+
+    <button id="addButton">Add block</button>
+
+    <div class="container">
+
+    </div>
+
+   
+
+    <script>
+
+        const container = document.querySelector(".container");
+        const button = document.querySelector("#addButton")
+        const text = document.querySelector(".text");
+
+        function addBlock() {
+            let block = document.createElement("div");
+            block.classList.add("myBlock");
+
+            var red = Math.floor(Math.random() * 255);
+            var green = Math.floor(Math.random() * 255);
+            var blue = Math.floor(Math.random() * 255);
+            block.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+            block.addEventListener("dblclick", () => {
+                block.remove();
+            })
+
+            block.addEventListener("click", () => {
+                text.style.color = `rgb(${red}, ${green}, ${blue})`;
+            });
+
+            container.appendChild(block);
+        }
+
+        button.addEventListener("click", addBlock);
+
+    </script>
+</body>
+
+</html>
