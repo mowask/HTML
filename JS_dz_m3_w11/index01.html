@@ -2,69 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+<body>
     <style>
-
         body {
-            background-color: #555;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
 
-        .open-btn{
-            margin: 20px ;
-            background-color: #555;
-            padding: 5px 20px;
-            cursor: pointer;
-            border: 1px solid black;            
-        }
-
-        .modal {
-            display: none;          /*  скрытое модальное окно */            
-            background-color: rgb(150, 220, 220); 
-            width: 400px;
-            margin: 10px 20px;
-        }
-
-        .modal-content {
-            background-color: rgb(150, 220, 220); 
+        .container {
+            background-color: white;
             padding: 20px;
-            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        .close-btn {
-            padding: 5px;
-            width: 100%;
-            margin: auto;
-            cursor: pointer;
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
         }
     </style>
 
-</head>
-<body>
     <div class="container">
-        <button class="open-btn">Open modal</button>        
-
-        <div class="modal" id="modalDiv">
-            <div class="modal-content">
-                <h3>Hello from Modal Window!</h3>
-                <button class="close-btn">Close</button>
-            </div>
-        </div>   
+        <div class="input-group">
+            <label for="username">Введите ваше имя:</label>
+            <input type="text" id="username" placeholder="Только буквы">
+        </div>
     </div>
 
     <script>
-        const modal = document.getElementById('modalDiv');
-        const openBtn = document.querySelector('.open-btn');
-        const closeBtn = document.querySelector('.close-btn');
-
-
-        openBtn.onclick = () => {
-            modal.style.display = 'block';
-        };
-
-        closeBtn.onclick = () => {
-            modal.style.display = 'none';
+        const usernameInput = document.getElementById('username');
+        
+        usernameInput.oninput = function(e) {
+            const value = e.target.value;
+            // Удаляем все цифры из введенного текста
+            const filteredValue = value.replace(/[0-9]/g, '');
+            
+            // Если значение изменилось после фильтрации, обновляем поле ввода
+            if (value !== filteredValue) {
+                e.target.value = filteredValue;
+            }
         };
     </script>
 </body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: bisque;
+            padding: 300px;
+        }
+
+        #color-switch {
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .color {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        button {
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-left: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="color-switch">
+            <div class="color" id="left"></div>
+            <div class="color" id="middle"></div>
+            <div class="color" id="right"></div>
+        </div>
+
+        <button id="button">NEXT</button>
+    </div>
+
+    <script>
+
+        let leftColor = document.getElementById("left").style.backgroundColor;
+        let middleColor = document.getElementById("middle").style.backgroundColor = "orange";
+        let rightColor = document.getElementById("right").style.backgroundColor;
+
+        function switchColor() {
+            const rightCircle = document.getElementById("right");
+            const middleCircle = document.getElementById("middle");
+            const leftCircle = document.getElementById("left");
+
+            if (middleCircle.style.backgroundColor === "orange") {
+                leftCircle.style.backgroundColor = "gray";
+                middleCircle.style.backgroundColor = "gray";
+                rightCircle.style.backgroundColor = "orange";
+            }
+            else if (rightCircle.style.backgroundColor === "orange") {
+                leftCircle.style.backgroundColor = "orange";
+                middleCircle.style.backgroundColor = "gray";
+                rightCircle.style.backgroundColor = "gray";
+            }
+            else if (leftCircle.style.backgroundColor === "orange") {
+                leftCircle.style.backgroundColor = "gray";
+                middleCircle.style.backgroundColor = "orange";
+                rightCircle.style.backgroundColor = "gray";
+            }
+        }
+
+        let button = document.getElementById("button");
+        button.addEventListener("click", switchColor);
+    </script>
+</body>
+
+</html>
